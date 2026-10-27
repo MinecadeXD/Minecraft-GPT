@@ -1,7 +1,6 @@
 // Path: src/index.ts
 
 import mineflayer from "mineflayer";
-import { config } from "dotenv";
 import { loadDb } from "./managers/persistenceManager";
 import { executeCommands, handleBotRejoin } from "./managers/actionManager";
 import { SERVER_HOST, SERVER_PORT } from "./config/env";
@@ -11,9 +10,6 @@ import { plugin as pvp } from "mineflayer-pvp";
 import { plugin as autoEat } from "mineflayer-auto-eat";
 import { plugin as tool } from "mineflayer-tool";
 import armorManager from "mineflayer-armor-manager";
-
-// Load environment variables
-config();
 
 // Load Database before starting bot
 loadDb();
