@@ -21,5 +21,8 @@
     "@types/node": "^22.14.0",
     "@types/uuid": "^10.0.0",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "prismarine-item": "1.18.0"
   }
 }
