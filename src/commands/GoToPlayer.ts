@@ -49,11 +49,17 @@ export async function execute(args: any = {}) {
     }
   }
 
-  bot.chat(`Heading towards ${targetPlayer.username || targetPlayer.name}.`);
+  const targetPlayerName = targetPlayer.username || targetPlayer.name;
+  if (typeof targetPlayerName !== "string" || targetPlayerName.length === 0) {
+    bot.chat("Could not determine the target player's name.");
+    return;
+  }
+
+  bot.chat(`Heading towards ${targetPlayerName}.`);
   
   // Try to use the dedicated goToPlayer function first which uses GoalFollow
   try {
-    const success = await goToPlayer(targetPlayer.username || targetPlayer.name, closeness);
+    const success = await goToPlayer(targetPlayerName, closeness);
     if (success) {
       await bot.lookAt(targetPlayer.position.offset(0, 1.6, 0));
       return;
