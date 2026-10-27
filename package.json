@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "lowdb": "^7.0.1",
-    "mineflayer": "^4.27.0",
+    "mineflayer": "4.39.0",
     "mineflayer-armor-manager": "^2.0.1",
     "mineflayer-auto-eat": "^4",
     "mineflayer-pathfinder": "^2.4.5",
